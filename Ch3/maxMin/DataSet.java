@@ -3,19 +3,20 @@ import javax.swing.JOptionPane;
 
 public class DataSet 
 {
-	public DataSet()
+	//vars
+	private int int1;
+	private int int2;
+	private int int3;
+	private int int4;
+	private int min;
+	private int max;
+	
+	public DataSet(int pInt1, int pInt2, int pInt3, int pInt4)
 	{
-		str1 = JOptionPane.showInputDialog("Input Integer 1.");
-		int1 = Integer.parseInt(str1);
-		
-		str2 = JOptionPane.showInputDialog("Input Integer 2.");
-		int2 = Integer.parseInt(str2);
-		
-		str3 = JOptionPane.showInputDialog("Input Integer 3.");
-		int3 = Integer.parseInt(str3);
-		
-		str4 = JOptionPane.showInputDialog("Input Integer 4.");
-		int4 = Integer.parseInt(str4);
+	int1 = pInt1;
+	int2 = pInt2;
+	int3 = pInt3;
+	int4 = pInt4;
 	}
 	public void math()
 	{
@@ -30,14 +31,5 @@ public class DataSet
 	{
 		return min;
 	}
-	private String str1;
-	private String str2;
-	private String str3;
-	private String str4;
-	private int int1;
-	private int int2;
-	private int int3;
-	private int int4;
-	private int min;
-	private int max;
+	
 }
