@@ -1,21 +1,39 @@
+
 import java.util.*;
 
 public class QuadForm {
 
+// vars
+	private double a, b, c; // quadratic equation coefficients
+	private double discriminant; // the value under the square root
 
-public static void main(String[]args) {
-  System.out.println("insert value for a:");
-  Scanner scan1 = new Scanner(System.in);
-   double a = scan1.nextDouble();
-    System.out.println("insert value for b:");
-  Scanner scan2 = new Scanner(System.in);
-    double b = scan2.nextDouble();
-    System.out.println("insert value for C:");
-  Scanner scan3 = new Scanner(System.in);
-   double c = scan3.nextDouble();
+// constructors
+	public QuadForm(double paramA, double paramB, double paramC) {
 
-    double answer =((Math.sqrt(Math.pow(b,2)-(4*a*c))-b)/2);
-      double final2 =(-b + Math.sqrt(Math.pow(b,2)-(4*a*c)))/2;
-  System.out.println("The x values are:" + answer + final2);
-}
-}
+		a = paramA;
+		b = paramB;
+		c = paramC;
+
+	} // end QuadForm 
+
+// methods
+	public double getSolution1() {
+
+		return (-b + Math.sqrt(Math.pow(b, 2) - (4 * a * c))) / (2 * a);
+
+	} // end getSolution1
+
+	public double getSolution2() {
+
+		return (-b - Math.sqrt(Math.pow(b, 2) - (4 * a * c))) / (2 * a);
+	} // end getSolution2
+
+	public boolean hasSolution() {
+		if (Math.pow(b, 2) - (4 * a * c) >= 0) {
+			return true;
+		} else {
+			return false;
+		}
+	} // end hasSolution
+
+} // end class QuadForm
