@@ -1,21 +1,19 @@
-package cds.chapters.ch5.MaxMin;
-import java.io.FileNotFoundException;
+
 import java.util.Scanner;
 
-public class MaxMinTest 
-{
-	public static void main(String[] args) throws FileNotFoundException
-	{
+public class MaxMinTest {
+	public static void main(String[] args) {
 		MaxMin MaxMin = new MaxMin();
 		Scanner console = new Scanner(System.in);
-		System.out.print("Enter the four strings: ");
-		MaxMin.string1 = console.next();
-		MaxMin.string2 = console.next();
-		MaxMin.string3 = console.next();
-		MaxMin.string4 = console.next();
-		MaxMin.getmin();
-		MaxMin.checkmin();
-		MaxMin.getmax();
-		MaxMin.checkmax();
+		System.out.print("Enter four strings: ");
+		MaxMin.addString(console.next());
+		MaxMin.addString(console.next());
+		MaxMin.addString(console.next());
+		MaxMin.addString(console.next());
+
+		System.out.println("The lexicographic minimum is " + MaxMin.getMinString());
+
+		System.out.println("The lexicographic maximum is " + MaxMin.getMaxString());
+		console.close();
 	}
 }
